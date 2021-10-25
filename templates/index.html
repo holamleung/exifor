@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block title %}Imfo{% endblock %}
+{% block heading %}
+    <h1>Welcome</h1>
+{% endblock %}
+{% block content %}
+    <p>Explore data store inside the image</p>
+    <form id="upload" action="/" method="post" enctype="multipart/form-data">
+        <div class=py-3>
+            <label for="fromfile" class="form-label">Upload your image:</label>
+            <input class="form-control" name="file" type="file" id="formFile" aria-describedby="fileHelp">
+        </div>
+        <div class="d-flex justify-content-between">
+            <div id="fileHelp" class="form-text text-white">
+                Accept jpg or jpeg files.<br>
+                File size must not exceede 16MB.
+            </div>
+            <div>
+                <input type="submit" value="Examine" class="btn btn-light">
+            </div>
+        </div>
+    </form>
+{% endblock %}

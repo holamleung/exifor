@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block title %}Result{% endblock %}
+{% block content %}
+    <div id="thumbnail">
+        <img src="{{ session['filepath'] }}" class="img-thumbnail figure-img mx-auto d-block" alt="Uploaded Image" style="width: 50%">
+    </div>
+    <div class="pt-3">
+        <table class="table table-dark table-striped">
+            {% if data == None %}
+                Image does not contain usable data.
+            {% else %}
+                {% for tag in data %}
+                    <tr>
+                        <th scope="row">{{ tag }}:</th>
+                            {% if data[tag] == None %}
+                                <td></td>
+                            {% else %}
+                                <td>{{ data[tag] }}</td>
+                            {% endif %}
+                    </tr>
+                {% endfor %}
+            {% endif %}
+        </table>
+    </div>
+{% endblock %}
