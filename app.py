@@ -12,7 +12,7 @@ from extract import process
 ALLOWED_EXTENSIONS = {"jpg", "jpeg"}
 
 # Designated a folder for user's upload
-UPLOAD_FOLDER = "static/clients_upload"
+UPLOAD_FOLDER = "static/client_upload"
 
 app = Flask(__name__)
 
