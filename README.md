@@ -1,8 +1,8 @@
-# EXIFOR
+# Exifor
 #### Video Demo:  <URL HERE>
 #### Description:
 
-## EXIFOR is a web application that helps users extract and understand the Exif data stored in their image files.
+## Exifor is a web application that helps users extract and understand the Exif data stored in their image files.
 
 The application is built using the Flask framework. Here is the project layout:
 ```
