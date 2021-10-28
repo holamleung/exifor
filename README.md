@@ -6,7 +6,7 @@
 
 The application is built using the Flask framework. Here is the project layout:
 ```
-/imfo
+/exifor
 |-app.py
 |-extract.py
 |-README.md
