@@ -18,21 +18,10 @@ def exif_tag(raw):
 
 # extract specificed tags
 def exif_extract(tagged):
-    targets= [
-        "ExifImageWidth",
-        "ExifImageHeight",
-        "Make",
-        "Model",
-        "DateTimeOriginal",
-        "OffsetTimeOriginal",
-        "ExposureTime",
-        "FNumber",
-        "FocalLength",
-        "LensModel",
-        "ISOSpeedRatings",
-        "ImageDescription",
-        "GPSInfo"
-    ]
+    targets= ["ExifImageWidth", "ExifImageHeight", "Make", "Model",
+             "DateTimeOriginal", "OffsetTimeOriginal", "ExposureTime",
+             "FNumber", "FocalLength", "LensModel", "ISOSpeedRatings",
+             "ImageDescription", "GPSInfo"]
     extracted = {}
     for tag in tagged:
         if tag in targets:
@@ -75,7 +64,8 @@ def time_convert(extracted):
     ptime = "%Y:%m:%d %H:%M:%S"
     ftime = "%b %d, %Y %H:%M:%S"
     try:
-        time_converted = "{} {}".format(extracted["DateTimeOriginal"], extracted["OffsetTimeOriginal"])
+        time_converted = "{} {}".format(extracted["DateTimeOriginal"],
+             extracted["OffsetTimeOriginal"])
         ptime += " %z"
         ftime += " %Z"
     except KeyError:
@@ -96,16 +86,17 @@ def shutter_convert(shutter):
 
 # convert exif data to human conventional
 def exif_convert(extracted):
-    convert = dict.fromkeys(
-        ["Resolution", "Capture Time", "Camera", "Lens", "Focal Length", "Shutter Speeds", "F/stops", "ISO", "GEO Location"]
-        )
+    convert = dict.fromkeys(["Resolution", "Capture Time", "Camera", "Lens",
+                             "Focal Length", "Shutter Speeds", "F/stops",
+                             "ISO", "Geolocation"])
     for tag in extracted:
         if tag == "ExifImageWidth" or tag == "ExifImageHeight":
             if convert["Resolution"] == None:
-                pixel_count = extracted["ExifImageWidth"] * extracted["ExifImageHeight"] / 1000000
+                pixel_count = (extracted["ExifImageWidth"]
+                     * extracted["ExifImageHeight"] / 1000000)
                 convert["Resolution"] = "{} x {} ({:.2f} MP)".format(
-                    extracted["ExifImageWidth"], extracted["ExifImageHeight"], pixel_count
-                    )
+                    extracted["ExifImageWidth"], extracted["ExifImageHeight"],
+                     pixel_count)
         elif tag == "DateTimeOriginal":
             convert["Capture Time"] = time_convert(extracted)
         elif tag == "Model":
