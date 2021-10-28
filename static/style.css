@@ -1,0 +1,15 @@
+body {
+    background-image: url("background-1920x1275.jpg");
+    background-position: 850px;
+    background-size: 1700px;
+    background-attachment: fixed;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: black;
+}

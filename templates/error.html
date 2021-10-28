@@ -1,0 +1,8 @@
+{% extends "layout.html" %}
+{% block title %}{{ message }}{% endblock %}
+{% block heading %}
+    <h1>{{ code }} {{message}}</h1>
+{% endblock %}
+{% block content %}
+    <p class="text-muted">Return to <a href="{{ url_for('index') }}">Homepage</a></p>
+{% endblock %}
