@@ -1,6 +1,4 @@
 # Exifor
-#### Video Demo:  <URL HERE>
-#### Description:
 
 ## Exifor is a web application that helps users extract and understand the Exif data stored in their image files.
 
