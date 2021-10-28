@@ -1,8 +1,8 @@
-# IMFO
+# EXIFOR
 #### Video Demo:  <URL HERE>
 #### Description:
 
-## IMFO is a web application that displays the Exif data extracted from image files.
+## EXIFOR is a web application that helps users extract and understand the Exif data stored in their image files.
 
 The application is built using the Flask framework. Here is the project layout:
 ```
