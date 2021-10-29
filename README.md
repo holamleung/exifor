@@ -10,6 +10,11 @@ Exif (Exchangeable Image File Format) is a standard that specifies the formats f
 
 At the homepage, simply upload your image and then click the "Examine" button. Voilà! The site will return a list of metadata to you.
 
+![Screenshot (10)](https://user-images.githubusercontent.com/75563658/139430533-4314ee39-4afa-4f19-bba9-56ac9a30f865.png)
+
+![Screenshot (12)](https://user-images.githubusercontent.com/75563658/139430621-710711ee-6ef6-4850-9168-9d6c19661809.png)
+
+
 ## Description
 
 The application is built using the Flask framework. Here is the project layout:
@@ -35,8 +40,8 @@ The application is built using the Flask framework. Here is the project layout:
 
 <code>config.cfg</code> has the configuration for the <code>secret_key</code> and maximum file size for the application. <b>Make sure to define a unique <code>secret_key</code> before running the program.</b> <code>requirements.txt</code> listed all the Python modules are used in the program.
 
-<code>README.md</code> is a text file describing the project. 
+<code>README.md</code> is a text file describing the project in detail.
 
-Inside the <code>templates</code> folder, there are four HTML files. <code>index.html</code> is the homepage. <code>result.html</code> displays the Exif data after users submit their files. <code>error.html</code> is a custom error page to handle exceptions in the application. <code>layout.html</code> is a layout template.
+Inside the <code>templates</code> folder, there are four HTML files. <code>index.html</code> is the homepage. <code>result.html</code> displays the Exif data result. <code>error.html</code> is a custom error page to handle exceptions in the application. <code>layout.html</code> is a layout template for other page references.
 
-The <code>static</code> folder contains the <code>style.css</code> for styling the webpage and the background image file. <code>clients_upload</code> temporarily stores the image files uploaded by users.
+The <code>static</code> folder contains the <code>style.css</code> for styling the webpage, and the <code>background-1920x1275.jpg</code> is a license-free image for the background. The website is mainly stylized using Bootstrap 5. It can dynamically resize to work on different devices with different screen sizes. The <code>clients_upload</code> folder is a temporary location for storing users' images.
