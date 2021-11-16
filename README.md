@@ -10,6 +10,12 @@ Exif (Exchangeable Image File Format) is a standard that specifies the formats f
 
 At the homepage, simply upload your image and then click the "Examine" button. Voilà! The site will return a list of metadata to you.
 
+![Screenshot (10)](https://user-images.githubusercontent.com/75563658/139430533-4314ee39-4afa-4f19-bba9-56ac9a30f865.png)
+
+
+
+![Screenshot (12)](https://user-images.githubusercontent.com/75563658/139430621-710711ee-6ef6-4850-9168-9d6c19661809.png)
+
 ## Description
 
 The application is built using the Flask framework. Here is the project layout:
